@@ -149,3 +149,51 @@ docs/
 ├── 06-n1 (placeholder)
 ├── 90-recursos
 └── 95-habilidades-transversales
+```
+---
+## 🛠️ Stack técnico
+
+Docusaurus 2
+Markdown / MDX
+Node.js
+Git / GitHub
+---
+
+▶️ Cómo ejecutar el proyecto localmente
+
+```js
+npm install
+npm run start
+```
+
+El sitio se levanta en:
+```text
+http://localhost:3000
+```
+---
+
+🔒 Estado del proyecto
+
+Proyecto activo
+
+Contenido en constante revisión
+
+Estructura pensada para escalar sin romper compatibilidad
+
+Versionado con Git para resguardo académico
+
+---
+
+📌 Nota final
+
+Este repositorio no es un simple resumen de japonés.
+Es una base de estudio seria, diseñada para alguien que quiere:
+
+entender japonés,
+
+pensar en japonés,
+
+y rendir el JLPT con fundamentos reales.
+---
+
+© Proyecto personal — Nihongo Docs

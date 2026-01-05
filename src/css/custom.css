@@ -1,0 +1,418 @@
+/* ============================================================
+   Nihongo Program — Global Styles
+   Nivel: Académico premium internacional
+   Compatible con Docusaurus 3.x
+   ============================================================ */
+
+/* ============================================================
+   1. Variables base (colores)
+   ============================================================ */
+
+:root {
+  /* Paleta principal */
+  --ifm-color-primary: #1f2937;        /* Sumi ink */
+  --ifm-color-primary-dark: #111827;
+  --ifm-color-primary-darker: #0f172a;
+  --ifm-color-primary-light: #374151;
+  --ifm-color-primary-lighter: #4b5563;
+
+  /* Acento japonés */
+  --jp-accent-red: #b91c1c;
+
+  /* Fondos */
+  --jp-bg-soft: #f9fafb;
+  --jp-bg-muted: #f3f4f6;
+
+  /* Texto */
+  --jp-text-main: #111827;
+  --jp-text-muted: #4b5563;
+  --jp-text-light: #6b7280;
+
+  /* Bordes */
+  --jp-border-soft: #e5e7eb;
+  --jp-border-strong: #d1d5db;
+}
+
+/* ============================================================
+   2. Tipografías
+   ============================================================ */
+
+:root {
+  --ifm-font-family-base: 'Inter', 'Noto Sans JP', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+}
+
+html {
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+body {
+  color: var(--jp-text-main);
+  background-color: #ffffff;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   3. Contenedor de lectura (CLAVE UX)
+   ============================================================ */
+
+.markdown {
+  max-width: 860px;              /* estándar editorial */
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   4. Encabezados
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--jp-text-main);
+}
+
+.markdown > h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--jp-accent-red);
+}
+
+.markdown > h3 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown > h4 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--jp-text-muted);
+}
+
+/* ============================================================
+   5. Párrafos y listas
+   ============================================================ */
+
+.markdown p {
+  margin-bottom: 1.25rem;
+}
+
+.markdown ul,
+.markdown ol {
+  margin-bottom: 1.4rem;
+  padding-left: 1.4rem;
+}
+
+.markdown li {
+  margin-bottom: 0.4rem;
+}
+
+/* ============================================================
+   6. Bloques semánticos
+   ============================================================ */
+
+/* Blockquote = cita / referencia */
+.markdown blockquote {
+  border-left: 4px solid var(--jp-border-strong);
+  background-color: var(--jp-bg-soft);
+  padding: 0.75rem 1rem;
+  color: var(--jp-text-muted);
+  font-style: normal;
+}
+
+/* Ejemplos (japonés / traducción) */
+.markdown .example {
+  background-color: var(--jp-bg-muted);
+  border-left: 4px solid var(--jp-accent-red);
+  padding: 1rem 1.25rem;
+  margin: 1.6rem 0;
+  border-radius: 6px;
+}
+
+.markdown .example strong {
+  display: block;
+  margin-top: 0.6rem;
+}
+
+/* ============================================================
+   7. Código y japonés inline
+   ============================================================ */
+
+/* Código técnico */
+code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9em;
+  background-color: var(--jp-bg-muted);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Bloques de código */
+pre {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* ============================================================
+   8. Tablas (gramática / kanji)
+   ============================================================ */
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.markdown th {
+  background-color: var(--jp-bg-muted);
+  text-align: left;
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid var(--jp-border-strong);
+}
+
+.markdown td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--jp-border-soft);
+}
+
+/* ============================================================
+   9. Sidebar
+   ============================================================ */
+
+.theme-doc-sidebar-container {
+  background-color: #ffffff;
+  border-right: 1px solid var(--jp-border-soft);
+}
+
+.menu__link {
+  font-size: 0.9rem;
+  color: var(--jp-text-main);
+}
+
+.menu__link--active {
+  font-weight: 600;
+  color: var(--jp-accent-red);
+}
+
+/* ============================================================
+   10. Navbar
+   ============================================================ */
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--jp-border-soft);
+}
+
+.navbar__title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   11. Admonitions (info / warning / tip)
+   ============================================================ */
+
+.admonition {
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.admonition-info {
+  border-left: 4px solid #2563eb;
+}
+
+.admonition-warning {
+  border-left: 4px solid #d97706;
+}
+
+.admonition-tip {
+  border-left: 4px solid #059669;
+}
+
+/* ============================================================
+   12. Footer
+   ============================================================ */
+
+.footer {
+  background-color: var(--jp-bg-soft);
+  border-top: 1px solid var(--jp-border-soft);
+  color: var(--jp-text-light);
+}
+
+/* ============================================================
+   13. Micro-ajustes
+   ============================================================ */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--jp-border-soft);
+  margin: 3rem 0;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e5e7eb;
+  --ifm-color-primary-dark: #d1d5db;
+  --ifm-color-primary-darker: #9ca3af;
+  --ifm-color-primary-light: #f3f4f6;
+  --ifm-color-primary-lighter: #ffffff;
+
+  --jp-bg-soft: #020617;
+  --jp-bg-muted: #020617;
+
+  --jp-text-main: #e5e7eb;
+  --jp-text-muted: #9ca3af;
+  --jp-text-light: #6b7280;
+
+  --jp-border-soft: #1f2937;
+  --jp-border-strong: #374151;
+}
+
+[data-theme='dark'] body {
+  background-color: #020617;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container,
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .footer {
+  background-color: #020617;
+}
+
+[data-theme='dark'] .markdown blockquote,
+[data-theme='dark'] .markdown .example {
+  background-color: #020617;
+}
+
+[data-theme='dark'] code,
+[data-theme='dark'] pre {
+  background-color: #020617;
+}
+/* ============================================================
+   Micro-UX académica
+   ============================================================ */
+
+/* Núcleo */
+.admonition-info {
+  background-color: rgba(185, 28, 28, 0.06);
+}
+
+/* Refuerzo */
+.admonition-tip {
+  background-color: rgba(5, 150, 105, 0.06);
+}
+
+/* Error frecuente */
+.admonition-warning {
+  background-color: rgba(217, 119, 6, 0.08);
+}
+
+/* Checkpoint */
+.admonition-note {
+  background-color: rgba(59, 130, 246, 0.06);
+  border-left: 4px solid #3b82f6;
+}
+/* ============================================================
+   Doc Pagination (Anterior / Siguiente)
+   Ajuste UX académico premium
+   ============================================================ */
+
+/* Contenedor general */
+.pagination-nav {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--jp-border-soft);
+}
+
+/* Tarjetas */
+.pagination-nav__link {
+  background-color: var(--jp-bg-soft);
+  border: 1px solid var(--jp-border-soft);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover */
+.pagination-nav__link:hover {
+  border-color: var(--jp-accent-red);
+  background-color: var(--jp-bg-muted);
+  text-decoration: none;
+}
+
+/* Texto */
+.pagination-nav__label {
+  font-size: 0.85rem;
+  color: var(--jp-text-muted);
+}
+
+.pagination-nav__title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--jp-text-main);
+}
+
+/* Separación clara del footer global */
+.main-wrapper {
+  padding-bottom: 4rem;
+}
+/* Dark mode — Doc Pagination */
+[data-theme='dark'] .pagination-nav__link {
+  background-color: #020617;
+  border-color: var(--jp-border-soft);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  background-color: #020617;
+  border-color: var(--jp-accent-red);
+}
+/* ============================================================
+   FIX layout final de documento (Docs + Footer)
+   ============================================================ */
+
+/* El área principal no debe “estirarse” visualmente */
+.main-wrapper {
+  background-color: var(--jp-bg-soft);
+}
+
+/* El contenedor real del documento */
+.docMainContainer {
+  background-color: transparent;
+}
+
+/* El contenido del doc define su propio cierre */
+.markdown {
+  padding-bottom: 4rem;
+}
+
+/* El footer debe arrancar limpio, sin superposición visual */
+.footer {
+  margin-top: 0;
+}
+[data-theme='dark'] .main-wrapper {
+  background-color: #020617;
+}

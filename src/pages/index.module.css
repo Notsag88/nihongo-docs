@@ -1,0 +1,99 @@
+.hero {
+  padding: 5rem 1.5rem;
+  background-color: var(--jp-bg-soft);
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--jp-text-main);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--jp-text-muted);
+  max-width: 720px;
+  line-height: 1.75;
+}
+
+.actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  padding: 0.65rem 1.4rem;
+  background-color: var(--jp-accent-red);
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.secondaryButton {
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--jp-border-strong);
+  color: var(--jp-text-main);
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.secondaryButton:hover {
+  background-color: var(--jp-bg-muted);
+  text-decoration: none;
+}
+
+/* ---------------------------
+   Levels section
+   --------------------------- */
+
+.levels {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.levelCard {
+  border: 1px solid var(--jp-border-soft);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  color: var(--jp-text-main);
+}
+
+.levelCard h2 {
+  margin-bottom: 0.75rem;
+}
+
+.levelCard p {
+  font-size: 0.95rem;
+  color: var(--jp-text-muted);
+}
+
+.levelCard a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .levelCard {
+  background-color: #020617;
+}
